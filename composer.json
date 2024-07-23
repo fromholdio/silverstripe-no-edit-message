@@ -1,0 +1,25 @@
+{
+  "name": "fromholdio/silverstripe-no-edit-message",
+  "type": "silverstripe-vendormodule",
+  "description": "Display friendly message in CMS on pages where user has no edit perm, rather than read-only form.",
+  "license": "BSD-3-Clause",
+  "keywords": ["silverstripe", "gridfield"],
+  "homepage": "https://github.com/fromholdio/silverstripe-no-edit-message",
+  "support": {
+    "issues": "https://github.com/fromholdio/silverstripe-no-edit-message/issues"
+  },
+  "authors": [{
+    "name": "Luke Fromhold",
+    "homepage": "https://fromhold.io"
+  }],
+  "require": {
+    "silverstripe/cms": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fromholdio\\NoEditMessage\\": "src/"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
