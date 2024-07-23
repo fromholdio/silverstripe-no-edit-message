@@ -1,6 +1,6 @@
 <?php
 
-namespace Fromholdio\NoEditMessage\Extensions;
+namespace Fromholdio\NoEditMessage\Controllers;
 
 use SilverStripe\CMS\Controllers\CMSMain;
 use SilverStripe\Forms\CompositeField;
