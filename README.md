@@ -11,10 +11,19 @@ Page:
   is_no_edit_message_enabled: true    # default: true
 ```
 
-And the following must be added to your `Page::getCMSFields()`
+And the following must be added to your `Page`
 
 ```php
 public function getCMSFields()
+{
+    if ($this->doShowNoEditMessage() && Controller::curr() instanceof LeftAndMain) {
+        return $this->getNoEditCMSFields();
+    }
+    
+    # ... any other regular code.
+}
+
+public function getSettingsFields()
 {
     if ($this->doShowNoEditMessage() && Controller::curr() instanceof LeftAndMain) {
         return $this->getNoEditCMSFields();
