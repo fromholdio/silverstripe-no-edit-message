@@ -20,9 +20,10 @@ class NoEditCMSPageHistoryViewerController extends CMSPageHistoryViewerControlle
         $form = CMSMain::getEditForm($id);
         if ($record->hasMethod('doShowNoEditMessage') && $record->doShowNoEditMessage())
         {
-            $paddedFieldsList = FieldList::create(
-                $paddedWrapper = CompositeField::create()
-            );
+            $paddedWrapper = class_exists('UncleCheese\DisplayLogic\Forms\Wrapper')
+                ? \UncleCheese\DisplayLogic\Forms\Wrapper::create()
+                : CompositeField::create();
+            $paddedFieldsList = FieldList::create($paddedWrapper);
             $paddedWrapper->addExtraClass('panel--padded');
 
             $noEditFields = $record->getNoEditCMSFields();
