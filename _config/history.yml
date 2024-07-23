@@ -1,0 +1,12 @@
+---
+Name: fromholdio-noeditmessage-history
+After:
+  - versionedadmincmsconfig
+Only:
+  moduleexists:
+    - silverstripe/versioned-admin
+---
+
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\VersionedAdmin\Controllers\CMSPageHistoryViewerController:
+    class: Fromholdio\NoEditMessage\Controllers\NoEditCMSPageHistoryViewerController
