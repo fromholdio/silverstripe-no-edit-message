@@ -14,7 +14,7 @@ class NoEditCMSPageHistoryViewerController extends CMSPageHistoryViewerControlle
     public function getEditForm($id = null, $fields = null): Form
     {
         /** @var DataObject $record */
-        $record = $this->getRecord($id ?: $this->currentPageID());
+        $record = $this->getRecord($id ?: $this->currentRecordID());
 
         /** @var Form $form */
         $form = CMSMain::getEditForm($id);
