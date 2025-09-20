@@ -11,7 +11,7 @@ use SilverStripe\VersionedAdmin\Controllers\CMSPageHistoryViewerController;
 
 class NoEditCMSPageHistoryViewerController extends CMSPageHistoryViewerController
 {
-    public function getEditForm($id = null, $fields = null)
+    public function getEditForm($id = null, $fields = null): Form
     {
         /** @var DataObject $record */
         $record = $this->getRecord($id ?: $this->currentPageID());

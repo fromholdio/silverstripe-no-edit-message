@@ -2,13 +2,13 @@
 
 namespace Fromholdio\NoEditMessage\Extensions;
 
-use SilverStripe\CMS\Model\SiteTreeExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\Tab;
 use SilverStripe\Forms\TabSet;
 
-class NoEditPageExtension extends SiteTreeExtension
+class NoEditPageExtension extends Extension
 {
     private static $is_no_edit_message_enabled = true;
 
